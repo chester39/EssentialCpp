@@ -1,3 +1,6 @@
+#ifndef STACK_H_
+#define STACK_H_
+
 #include <string>
 #include <vector>
 
@@ -27,3 +30,5 @@ public:
 private:
 	vector<string> vecStack;
 };
+
+#endif
