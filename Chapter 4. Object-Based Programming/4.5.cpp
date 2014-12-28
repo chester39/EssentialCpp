@@ -91,29 +91,34 @@ Matrix::Matrix(float a11, float a12, float a13, float a14,
 int main(int argc, char *argv[])
 {
 	Matrix mat1;
-	cout << mat1 << endl;
-	float arr[16] = {1.0, 0.0, 0.0, 0.0,
-					0.0, 1.0, 0.0, 0.0,
-					0.0, 0.0, 1.0, 0.0,
-					0.0, 0.0, 0.0, 1.0 };
+	cout << "Matrix 1: " << endl << mat1 << endl;
+	float arr[16] = 
+	{
+		1.0, 0.0, 0.0, 0.0,
+		0.0, 1.0, 0.0, 0.0,
+		0.0, 0.0, 1.0, 0.0,
+		0.0, 0.0, 0.0, 1.0
+	};
 	Matrix identity(arr);
-	cout << identity << endl;
+	cout << "Matrix identity: " << endl << identity << endl;
 	Matrix mat2(identity);
 	mat1 = identity;
-
-	cout << mat2 << endl; cout << mat1 << endl;
-
-	float ar2[16] = {1.3f, 0.4f, 2.6f, 8.2f,
-					6.2f, 1.7f, 1.3f, 8.3f,
-					4.2f, 7.4f, 2.7f, 1.9f,
-					6.3f, 8.1f, 5.6f, 6.6f };
+	cout << "Matrix 2: " << endl << mat2 << endl;
+	cout << "Matrix 1: " << endl << mat1 << endl;
+	float ar2[16] = 
+	{
+		1.3f, 0.4f, 2.6f, 8.2f,
+		6.2f, 1.7f, 1.3f, 8.3f,
+		4.2f, 7.4f, 2.7f, 1.9f,
+		6.3f, 8.1f, 5.6f, 6.6f
+	};
 	Matrix mat3(ar2);
-	cout << mat3 << endl;
+	cout << "Matrix 3: " << endl << mat3 << endl;
 	Matrix mat4 = mat3 * identity;
-	cout << mat4 << endl;
+	cout << "Matrix 4: " << endl << mat4 << endl;
 	Matrix mat5 = mat3 + mat4;
-	cout << mat5 << endl;
+	cout << "Matrix 5: " << endl << mat5 << endl;
 	mat3 += mat4;
-	cout << mat3 << endl;
+	cout << "Matrix 3: " << endl << mat3 << endl;
 	return 0;
 }
