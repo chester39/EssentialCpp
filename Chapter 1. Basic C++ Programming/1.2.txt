@@ -1,0 +1,16 @@
+/**************************************************
+ *              Essential C++                     *
+ *                Stanley Lippman                 *
+ *                Chen Chen @ November 26th, 2014 *
+ **************************************************/
+ 
+
+//#include <string>
+
+	string userName; //string unrecognized.
+
+//using namespace std;
+
+	cout << "Please enter your first name: "; //cout unrecognized.
+	cin >> userName; //cin unrecognized.
+	cout << endl << "Hello, " << userName << "... and goodbye!" << endl; //cout unrecognized.
