@@ -9,12 +9,9 @@
 
 	string userName; //string unrecognized.
 
+
 //using namespace std;
 
 	cout << "Please enter your first name: "; //cout unrecognized.
 	cin >> userName; //cin unrecognized.
-<<<<<<< HEAD
 	cout << endl << "Hello, " << userName << "... and goodbye!" << endl; //cout unrecognized.
-=======
-	cout << endl << "Hello, " << userName << "... and goodbye!" << endl; //cout unrecognized.
->>>>>>> 182ee3a214fe25b4d1bc6f2d2d1bf52c0fbff338
