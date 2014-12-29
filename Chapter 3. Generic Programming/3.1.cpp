@@ -38,7 +38,7 @@ void UserQuery(map<string, int> &simap)
 	cout << "Please enter the word you want to query: ";
 	cin >> queryWord;
 	int i = 0;
-	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; itr++)
+	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; ++itr)
 	{
 		i++;
 		if (itr->first == queryWord)
@@ -55,7 +55,7 @@ void UserQuery(map<string, int> &simap)
 
 void DisplayWordCount(map<string, int> &simap, ofstream &ofile)
 {
-	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; itr++)
+	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; ++itr)
 	{
 		ofile << itr->first << "-" << itr->second << endl;
 	}

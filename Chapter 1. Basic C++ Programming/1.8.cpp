@@ -21,4 +21,8 @@ const char *MessageToUser(int numTries)
 	else if (numTries >= num)
 		numTries = num - 1;
 	return userMessage[numTries];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 182ee3a214fe25b4d1bc6f2d2d1bf52c0fbff338

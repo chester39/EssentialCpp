@@ -12,16 +12,16 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	string username;
+	string userName;
 	cout << "Please enter your name: ";
-	cin >> username;
-	if (username.size() <= 2)
+	cin >> userName;
+	if (userName.size() <= 2)
 	{
 		cout << "Your name is too short!" << endl;
 	}
 	else
 	{
-		cout << "Nice name, hello " << username << "!" << endl;
+		cout << "Nice name, hello " << userName << "!" << endl;
 	}
 	return 0;
 }

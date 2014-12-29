@@ -17,4 +17,8 @@ int main(int argc, char *argv[])
 	cin >> userName;
 	cout << endl << "Hello, " << userName << "... and goodbye!" << endl;
 	return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 182ee3a214fe25b4d1bc6f2d2d1bf52c0fbff338

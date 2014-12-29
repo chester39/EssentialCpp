@@ -22,18 +22,18 @@ int main(int argc, char *argv[])
 	}
 	string word;
 	vector<string> vecWord;
-	while (read_file >> word)
+	while (readFile >> word)
 	{
 		vecWord.push_back(word);
 	}
 	cout << "Original text: ";
-	for (vector<string>::iterator itr = vecWord.begin(), vecEnd = vecWord.end(); itr != vecEnd; itr++)
+	for (vector<string>::iterator itr = vecWord.begin(), vecEnd = vecWord.end(); itr != vecEnd; ++itr)
 	{
 		cout << *itr << " ";
 	}
 	sort(vecWord.begin(),vecWord.end());
 	cout << endl << "Sorted text: ";
-	for (vector<string>::iterator itr = vecWord.begin(), vecEnd = vecWord.end(); itr != vecEnd; itr++)
+	for (vector<string>::iterator itr = vecWord.begin(), vecEnd = vecWord.end(); itr != vecEnd; ++itr)
 	{
 		cout << *itr << " ";
 	}

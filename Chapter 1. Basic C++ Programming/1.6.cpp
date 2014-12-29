@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	{
 		vecNumber.push_back(number);
 	}
-	for (vector<int>::iterator itr = vecNumber.begin(), vecEnd = vecNumber.end(); itr != vecEnd; itr++)
+	for (vector<int>::iterator itr = vecNumber.begin(), vecEnd = vecNumber.end(); itr != vecEnd; ++itr)
 	{
 		sum += *itr;
 	}

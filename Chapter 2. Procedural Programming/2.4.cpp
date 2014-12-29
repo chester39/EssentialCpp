@@ -25,7 +25,7 @@ const vector<int> *PentaFunc(int pos)
 	static vector<int> ivec;
 	if ((JudgeElem(pos)) && (pos > ivec.size()))
 	{
-		for (int ix = ivec.size(); ix <= pos; ix++)
+		for (int ix = ivec.size(); ix <= pos; ++ix)
 		{
 			ivec.push_back(ix * (3 * ix - 1) / 2);
 		}

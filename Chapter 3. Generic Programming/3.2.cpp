@@ -34,7 +34,7 @@ void InitVector(vector<string> &svec, ifstream &ifile)
 void DisplayVector(vector<string> &svec, ofstream &ofile)
 {
 	int i = 1;
-	for (vector<string>::iterator itr = svec.begin(), vecEnd = svec.end(); itr != vecEnd; itr++)
+	for (vector<string>::iterator itr = svec.begin(), vecEnd = svec.end(); itr != vecEnd; ++itr)
 	{
 		ofile << *itr << ((i++ % 5) ? ' ' : '\n');
 	}

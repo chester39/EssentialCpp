@@ -43,7 +43,7 @@ void InitMap(map<string, vector<string> > &svmap, ifstream &ifile)
 
 void DisplayMap(map<string, vector<string> > &svmap, ofstream &ofile)
 {
-	for (map<string, vector<string> >::iterator itr = svmap.begin(), mapEnd = svmap.end(); itr != mapEnd; itr++)
+	for (map<string, vector<string> >::iterator itr = svmap.begin(), mapEnd = svmap.end(); itr != mapEnd; ++itr)
 	{
 		ofile << "The " << itr->first << " family ";
 		if (itr->second.empty())
@@ -51,7 +51,7 @@ void DisplayMap(map<string, vector<string> > &svmap, ofstream &ofile)
 		else
 		{
 			ofile << "has " << itr->second.size() << " children: ";
-			for (vector<string>::iterator itrvec = itr->second.begin(), vecEnd = itr->second.end(); itrvec != vecEnd; itrvec++)
+			for (vector<string>::iterator itrvec = itr->second.begin(), vecEnd = itr->second.end(); itrvec != vecEnd; ++itrvec)
 				ofile << *itrvec << " ";
 			ofile << endl;
 		}
@@ -64,13 +64,13 @@ void UserQuery(map<string, vector<string> > &svmap)
 	cout << "Please enter a family name you want to query: ";
 	cin >> queryName;
 	int i = 0;
-	for (map<string, vector<string> >::iterator itr = svmap.begin(), mapEnd = svmap.end(); itr != mapEnd; itr++)
+	for (map<string, vector<string> >::iterator itr = svmap.begin(), mapEnd = svmap.end(); itr != mapEnd; ++itr)
 	{
 		i++;
 		if (itr->first == queryName)
 		{
 			cout << "The " << itr->first << " family has " << itr->second.size() << " children: ";
-			for (vector<string>::iterator itrvec = itr->second.begin(), vecEnd = itr->second.end(); itrvec != vecEnd; itrvec++)
+			for (vector<string>::iterator itrvec = itr->second.begin(), vecEnd = itr->second.end(); itrvec != vecEnd; ++itrvec)
 				cout << *itrvec << " ";
 			break;
 		}

@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	cin >> vecName[0];
 	cout << "Please enter your last name: ";
 	cin >> vecName[1];
-	for (vector<string>::iterator itr = vecName.begin(), vecEnd = vecName.end(); itr != vecEnd; itr++)
+	for (vector<string>::iterator itr = vecName.begin(), vecEnd = vecName.end(); itr != vecEnd; ++itr)
 	{
 		cout << *itr << " ";
 	}

@@ -24,12 +24,12 @@ Matrix operator+(const Matrix &mat1, const Matrix &mat2)
 Matrix operator*(const Matrix &mat1, const Matrix &mat2)
 {
 	Matrix result;
-	for (int ix = 0; ix < mat1.Rows(); ix++)
+	for (int ix = 0; ix < mat1.Rows(); ++ix)
 	{
-		for (int jx = 0; jx < mat1.Cols(); jx++)
+		for (int jx = 0; jx < mat1.Cols(); ++jx)
 		{
 			result(ix, jx) = 0;
-			for (int kx = 0; kx < mat1.Cols(); kx++)
+			for (int kx = 0; kx < mat1.Cols(); ++kx)
 				result(ix, jx) += mat1(ix, kx) * mat2(kx, jx);
 		}
 	}
@@ -38,20 +38,23 @@ Matrix operator*(const Matrix &mat1, const Matrix &mat2)
 
 void Matrix::operator+=(const Matrix &mat)
 {
-	for (int ix = 0; ix < 4; ix++)
-		for (int jx = 0; jx < 4; jx++)
+	for (int ix = 0; ix < 4; ++ix)
+		for (int jx = 0; jx < 4; ++jx)
 			myMatrix[ix][jx] += mat.myMatrix[ix][jx];
 }
 
 ostream &Matrix::Print(ostream &os) const
 {
-	int cnt = 0;
-	for (int ix = 0; ix < 4; ix++)
-		for (int jx = 0; jx < 4; jx++, cnt++)
+	int num = 0;
+	for (int ix = 0; ix < 4; ++ix)
+	{
+		for (int jx = 0; jx < 4; ++jx, ++num)
 		{
-			if (cnt && !(cnt % 8)) os << endl;
+			if (num && !(num % 8))
+				os << endl;
 			os << myMatrix[ix][jx] << ' ';
 		}
+	}
 	os << endl;
 	return os;
 }
@@ -60,15 +63,15 @@ Matrix::Matrix(const float *array)
 {
 	int arrayIndex = 0;
 	for (int ix = 0; ix < 4; ++ix)
-	for (int jx = 0; jx < 4; ++jx)
-		myMatrix[ix][jx] = array[arrayIndex++];
+		for (int jx = 0; jx < 4; ++jx)
+			myMatrix[ix][jx] = array[arrayIndex++];
 
 }
 
 Matrix::Matrix(float a11, float a12, float a13, float a14,
-			float a21, float a22, float a23, float a24,
-			float a31, float a32, float a33, float a34,
-			float a41, float a42, float a43, float a44)
+	float a21, float a22, float a23, float a24,
+	float a31, float a32, float a33, float a34,
+	float a41, float a42, float a43, float a44)
 {
 	myMatrix[0][0] = a11;
 	myMatrix[0][1] = a12;
@@ -92,7 +95,7 @@ int main(int argc, char *argv[])
 {
 	Matrix mat1;
 	cout << "Matrix 1: " << endl << mat1 << endl;
-	float arr[16] = 
+	float arr[16] =
 	{
 		1.0, 0.0, 0.0, 0.0,
 		0.0, 1.0, 0.0, 0.0,
@@ -105,7 +108,7 @@ int main(int argc, char *argv[])
 	mat1 = identity;
 	cout << "Matrix 2: " << endl << mat2 << endl;
 	cout << "Matrix 1: " << endl << mat1 << endl;
-	float ar2[16] = 
+	float ar2[16] =
 	{
 		1.3f, 0.4f, 2.6f, 8.2f,
 		6.2f, 1.7f, 1.3f, 8.3f,
