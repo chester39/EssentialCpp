@@ -1,9 +1,9 @@
-#Essential C++
+# Essential C++
+## By Stanley Lippman
+## Exercises Solutions of Essential C++, of which the author is Chester Chen. 
+## November 26th, 2014 - December 29th, 2014
 
-##Exercises of Essential C++, of which the author is Stanley Lippman. 
-##Exercises Solutions of Essential C++, of which the author is Chen Chen. 
-
-### Table of Contents
+### Contents
 
 - [Chapter 1. Basic C++ Programming](Chapter 1. Basic C++ Programming)
 - [Chapter 2. Procedural Programming](Chapter 2. Procedural Programming)

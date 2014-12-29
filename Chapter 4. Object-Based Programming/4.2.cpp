@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 {
 	Stack testStack;
 	string word;
-	cout << "Please enter some strings: ";
+	cerr << "Please enter some strings: ";
 	while (cin >> word && !testStack.Full())
 		testStack.Push(word);
 	if (testStack.Empty())

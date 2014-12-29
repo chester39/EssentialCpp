@@ -12,8 +12,6 @@ public:
 	enum userLevel { Beginner, Intermediate, Advanced, Guru };
 	UserProfile();
 	UserProfile(string login, userLevel = Beginner);
-	bool operator==(const UserProfile &temp);
-	bool operator!=(const UserProfile &temp);
 	string UserLogin() const
 	{
 		return userLogin;
@@ -34,8 +32,6 @@ public:
 	{
 		return correctGuessed;
 	}
-	double GuessAverage() const;
-	string UserLevel() const;
 	void ResetLogin(const string &val)
 	{
 		userLogin = val;
@@ -44,7 +40,7 @@ public:
 	{
 		userName = val;
 	}
-	void ResetLevel(const string &);
+	void ResetLevel(const string &str);
 	void ResetLevel(userLevel newLevel)
 	{
 		nowLevel = newLevel;
@@ -61,19 +57,23 @@ public:
 	{
 		correctGuessed = val;
 	}
-	void BumpLoginCount(int cnt = 1)
+	void BumpLoginCount(int num = 1)
 	{
-		timesLogged += cnt;
+		timesLogged += num;
 	}
-	void BumpGuessCount(int cnt = 1)
+	void BumpGuessCount(int num = 1)
 	{
-		timesGuessed += cnt;
+		timesGuessed += num;
 	}
-	void BumpGuessCorrect(int cnt = 1)
+	void BumpGuessCorrect(int num = 1)
 	{
-		correctGuessed += cnt;
+		correctGuessed += num;
 	}
-
+	bool operator==(const UserProfile &temp);
+	bool operator!=(const UserProfile &temp);
+	double GuessAverage() const;
+	string UserLevel() const;
+	
 private:
 	string userLogin;
 	string userName;

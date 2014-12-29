@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 	while (cin >> word && !testStack.Full())
 		testStack.Push(word);
 	if (testStack.Empty())
-		cout << "Sorry, the stack is empty." << endl;
+		cerr << "Sorry, the stack is empty." << endl;
 	if (testStack.Peek(word))
 		cout << "There are " << testStack.Size() << " strings in the stack." << endl;
 	cout << "The reverse order: ";

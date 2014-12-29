@@ -12,6 +12,7 @@ Reflects an is-a relationship:
 (f)
 (g)
 
+
 Not reflects an is-a relationship:
 (b)
 (e)
