@@ -15,7 +15,7 @@ public:
 	Example(const Type &min, const Type &max);
 	Example(const Type *array, int size);
 	Type opeartor[](int index);
-	bool opeartor == (const Example &) const;
+	bool opeartor==(const Example &) const;
 	bool Insert(const Type *, int);
 	bool Insert(Type &);
 	Type Min() const
