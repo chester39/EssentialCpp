@@ -7,7 +7,7 @@
 class Peekback_Stack : public Stack
 {
 public:
-	Peekback_Stack(int room = 0) :topStack(0)
+	Peekback_Stack(int room = 0) : topStack(0)
 	{
 		if (room)
 			vecStack.reserve(room);

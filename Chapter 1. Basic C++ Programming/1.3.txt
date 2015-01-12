@@ -5,5 +5,4 @@
  **************************************************/
  
 
-int my_main(int argc, char *argv[]) //The program will not work without main().
-{}
+int my_main(int argc, char *argv[]) {} //The program will not work without main().

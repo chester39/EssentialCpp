@@ -19,8 +19,7 @@ inline UserProfile::UserProfile() : userLogin("guest"), nowLevel(Beginner), time
 	userLogin += buffer;
 }
 
-inline UserProfile::UserProfile(string login, userLevel level) : userLogin(login), nowLevel(level), timesLogged(1), timesGuessed(0), correctGuessed(0)
-{}
+inline UserProfile::UserProfile(string login, userLevel level) : userLogin(login), nowLevel(level), timesLogged(1), timesGuessed(0), correctGuessed(0) {}
 
 inline bool UserProfile::operator==(const UserProfile &temp)
 {

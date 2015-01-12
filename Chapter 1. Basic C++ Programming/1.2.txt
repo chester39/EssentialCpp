@@ -7,11 +7,11 @@
 
 //#include <string>
 
-	string userName; //string unrecognized.
+	string userName; //string is unrecognized.
 
 
 //using namespace std;
 
-	cout << "Please enter your first name: "; //cout unrecognized.
-	cin >> userName; //cin unrecognized.
-	cout << endl << "Hello, " << userName << "... and goodbye!" << endl; //cout unrecognized.
+	cout << "Please enter your first name: "; //cout is unrecognized.
+	cin >> userName; //cin is unrecognized.
+	cout << endl << "Hello, " << userName << "... and goodbye!" << endl; //cout is unrecognized.

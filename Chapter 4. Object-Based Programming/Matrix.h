@@ -38,4 +38,5 @@ public:
 private:
 	float myMatrix[4][4];
 };
+
 #endif

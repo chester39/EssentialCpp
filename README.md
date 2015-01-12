@@ -1,7 +1,7 @@
 # Essential C++
 ## By Stanley Lippman
 ## Exercises Solutions of Essential C++, of which the author is Chester Chen. 
-## November 26th, 2014 - December 29th, 2014
+## November 26th, 2014 - January 13th, 2015
 
 ### Contents
 

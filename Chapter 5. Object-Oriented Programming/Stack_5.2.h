@@ -10,7 +10,7 @@ using namespace std;
 class Stack
 {
 public:
-	Stack(int room = 0) :topStack(0)
+	Stack(int room = 0) : topStack(0)
 	{
 		if (room)
 			vecStack.reserve(room);
