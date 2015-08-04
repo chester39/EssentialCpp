@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ November 30th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ November 30th, 2014
+//
  
 #include <iostream>
 #include <string>
@@ -63,7 +62,13 @@ int main(int argc, char *argv[])
 	vector<int> intVec(intArray, intArray + 5);
 	double douArray[] = { 5.1, 5.5, 10.3, 15.6, 20.8 };
 	vector<double> douVec(douArray, douArray + 5);
-	string strArray[] = { "we", "were", "going", "to", "school" };
+	string strArray[] = { 
+		"we", 
+		"were", 
+		"going", 
+		"to", 
+		"school" 
+	};
 	vector<string> strVec(strArray, strArray + 5);
 	int intMax = max(max(intVec), max(intArray, 5));
 	double douMax = max(max(douVec), max(douArray, 5));

@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ December 5th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 5th, 2014
+//
  
 #include <iostream>
 #include <fstream>
@@ -22,12 +21,9 @@ void InitExclusionSet(set<string> &sset)
 void ProcessFile(map<string, int> &simap, const set<string> &sset, ifstream &ifile)
 {
 	string word;
-	while (ifile >> word)
-	{
+	while (ifile >> word) {
 		if (sset.count(word))
-		{
 			continue;
-		}
 		simap[word]++;
 	}
 }
@@ -38,35 +34,28 @@ void UserQuery(map<string, int> &simap)
 	cout << "Please enter the word you want to query: ";
 	cin >> queryWord;
 	int i = 0;
-	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; ++itr)
-	{
+	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; ++itr) {
 		i++;
-		if (itr->first == queryWord)
-		{
+		if (itr->first == queryWord) {
 			cout << "The word " << itr->first << " has appeared " << itr->second << " times." << endl;
 			break;
 		}
 	}
 	if (i >= simap.size())
-	{
 		cout << "Sorry, the word " << queryWord << " is not found." << endl;
-	}
 }
 
 void DisplayWordCount(map<string, int> &simap, ofstream &ofile)
 {
 	for (map<string, int>::iterator itr = simap.begin(), mapEnd = simap.end(); itr != mapEnd; ++itr)
-	{
 		ofile << itr->first << "-" << itr->second << endl;
-	}
 }
 
 int main(int argc, char *argv[])
 {
 	ifstream readFile("TestFile_3.1.txt");
 	ofstream writeFile("TestFile_3.1.map");
-	if (!readFile.is_open() || !writeFile.is_open())
-	{
+	if (!readFile.is_open() || !writeFile.is_open()) {
 		cerr << "Sorry, the file fails to read!" << endl;
 		return -1;
 	}

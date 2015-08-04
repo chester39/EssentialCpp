@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ December 7th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 7th, 2014
+//
 
 #ifndef GLOBALDATA_H_
 #define GLOBALDATA_H_

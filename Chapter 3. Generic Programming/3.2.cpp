@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ December 5th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 5th, 2014
+//
  
 #include <iostream>
 #include <fstream>
@@ -26,26 +25,21 @@ void InitVector(vector<string> &svec, ifstream &ifile)
 {
 	string word;
 	while (ifile >> word)
-	{
 		svec.push_back(word);
-	}
 }
 
 void DisplayVector(vector<string> &svec, ofstream &ofile)
 {
 	int i = 1;
 	for (vector<string>::iterator itr = svec.begin(), vecEnd = svec.end(); itr != vecEnd; ++itr)
-	{
 		ofile << *itr << ((i++ % 5) ? ' ' : '\n');
-	}
 }
 
 int main(int argc, char *argv[])
 {
 	ifstream readFile("TestFile_3.2.txt");
 	ofstream writeFile("TestFile_3.2.vector");
-	if (!readFile.is_open() || !writeFile.is_open())
-	{
+	if (!readFile.is_open() || !writeFile.is_open()) {
 		cerr << "Sorry, the file fails to read!" << endl;
 		return -1;
 	}

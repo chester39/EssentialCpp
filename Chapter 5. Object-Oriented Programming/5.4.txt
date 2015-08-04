@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ December 24th, 2014 *
- **************************************************/
-
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 29th, 2014
+//
 
 Library Material
 	book

@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 22nd, 2014
+//
+
 #ifndef USERPROFILE_H_
 #define USERPROFILE_H_
 
@@ -9,7 +15,12 @@ using namespace std;
 class UserProfile
 {
 public:
-	enum userLevel { Beginner, Intermediate, Advanced, Guru };
+	enum userLevel { 
+		Beginner, 
+		Intermediate, 
+		Advanced, 
+		Guru
+	};
 	UserProfile();
 	UserProfile(string login, userLevel = Beginner);
 	string UserLogin() const

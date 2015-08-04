@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ December 23rd, 2014 *
- **************************************************/
-
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 23rd, 2014
+//
 
 #include "Matrix.h"
 
@@ -24,13 +23,13 @@ Matrix operator+(const Matrix &mat1, const Matrix &mat2)
 Matrix operator*(const Matrix &mat1, const Matrix &mat2)
 {
 	Matrix result;
-	for (int ix = 0; ix < mat1.Rows(); ++ix)
-		for (int jx = 0; jx < mat1.Cols(); ++jx)
-		{
+	for (int ix = 0; ix < mat1.Rows(); ++ix) {
+		for (int jx = 0; jx < mat1.Cols(); ++jx) {
 			result(ix, jx) = 0;
 			for (int kx = 0; kx < mat1.Cols(); ++kx)
 				result(ix, jx) += mat1(ix, kx) * mat2(kx, jx);
 		}
+	}
 	return result;
 }
 
@@ -44,13 +43,13 @@ void Matrix::operator+=(const Matrix &mat)
 ostream &Matrix::Print(ostream &os) const
 {
 	int num = 0;
-	for (int ix = 0; ix < 4; ++ix)
-		for (int jx = 0; jx < 4; ++jx, ++num)
-		{
+	for (int ix = 0; ix < 4; ++ix) {
+		for (int jx = 0; jx < 4; ++jx, ++num) {
 			if (num && !(num % 8))
 				os << endl;
 			os << myMatrix[ix][jx] << ' ';
 		}
+	}
 	os << endl;
 	return os;
 }
@@ -91,8 +90,7 @@ int main(int argc, char *argv[])
 {
 	Matrix mat1;
 	cout << "Matrix 1: " << endl << mat1 << endl;
-	float arr1[16] =
-	{
+	float arr1[16] = {
 		1.0, 0.0, 0.0, 0.0,
 		0.0, 1.0, 0.0, 0.0,
 		0.0, 0.0, 1.0, 0.0,
@@ -104,8 +102,7 @@ int main(int argc, char *argv[])
 	mat1 = identity;
 	cout << "Matrix 2: " << endl << mat2 << endl;
 	cout << "Matrix 1: " << endl << mat1 << endl;
-	float arr2[16] =
-	{
+	float arr2[16] = {
 		1.3f, 0.4f, 2.6f, 8.2f,
 		6.2f, 1.7f, 1.3f, 8.3f,
 		4.2f, 7.4f, 2.7f, 1.9f,

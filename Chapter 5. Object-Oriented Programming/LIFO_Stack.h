@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 29th, 2014
+//
+
 #ifndef LIFO_STACK_H_
 #define LIFO_STACK_H_
 
@@ -44,8 +50,7 @@ private:
 
 bool LIFO_Stack::Pop(string &elem)
 {
-	if (Empty())
-	{
+	if (Empty()) {
 		cerr << "Sorry, the stack is empty." << endl;
 		return false;
 	}
@@ -56,8 +61,7 @@ bool LIFO_Stack::Pop(string &elem)
 
 bool LIFO_Stack::Push(const string &elem)
 {
-	if (Full())
-	{
+	if (Full()) {
 		cerr << "Sorry, the stack is full." << endl;
 		return false;
 	}
@@ -66,12 +70,10 @@ bool LIFO_Stack::Push(const string &elem)
 	return true;
 }
 
-void LIFO_Stack::Print(ostream &os /* = cout */) const
+void LIFO_Stack::Print(ostream &os) const
 {
 	for (vector<string>::const_reverse_iterator itr = vecStack.rbegin(), vecEnd = vecStack.rend(); itr != vecEnd; ++itr)
-	{
 		os << *itr << " ";
-	}
 	os << endl;
 }
 

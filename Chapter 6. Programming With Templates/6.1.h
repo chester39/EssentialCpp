@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ December 29th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 29th, 2014
+//
  
 #ifndef EXAMPLE_H_
 #define EXAMPLE_H_

@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 7th, 2014
+//
+
 #ifndef STACK_H_
 #define STACK_H_
 

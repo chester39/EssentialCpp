@@ -1,14 +1,12 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ January 12th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ January 12th, 2014
+//
 
 bool Stack::Pop(string &elem)
 {
-	if (Empty())
-	{
+	if (Empty()) {
 		throw PopEmpty();
 		return false;
 	}
@@ -19,8 +17,7 @@ bool Stack::Pop(string &elem)
 
 bool Stack::Push(const string &elem)
 {
-	if (Full())
-	{
+	if (Full()) {
 		throw PushFull();
 		return false;
 	}

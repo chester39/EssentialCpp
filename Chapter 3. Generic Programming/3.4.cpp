@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ December 5th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 5th, 2014
+//
  
 #include <iostream>
 #include <fstream>
@@ -26,8 +25,7 @@ int main(int argc, char *argv[])
 {
 	ofstream writeOddFile("TestFile_3.4.odd");
 	ofstream writeEvenFile("TestFile_3.4.even");
-	if (!writeOddFile.is_open() || !writeEvenFile.is_open())
-	{
+	if (!writeOddFile.is_open() || !writeEvenFile.is_open()) {
 		cerr << "Sorry, the file fails to read!" << endl;
 		return -1;
 	}

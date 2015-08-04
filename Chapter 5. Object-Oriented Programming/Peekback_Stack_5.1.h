@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 29th, 2014
+//
+
 #ifndef PEEKBACK_STACK_H_
 #define PEEKBACK_STACK_H_
 
@@ -41,8 +47,7 @@ private:
 
 bool Peekback_Stack::Pop(string &elem)
 {
-	if (Empty())
-	{
+	if (Empty()) {
 		cerr << "Sorry, the stack is empty." << endl;
 		return false;
 	}
@@ -53,8 +58,7 @@ bool Peekback_Stack::Pop(string &elem)
 
 bool Peekback_Stack::Push(const string &elem)
 {
-	if (Full())
-	{
+	if (Full()) {
 		cerr << "Sorry, the stack is full." << endl;
 		return false;
 	}
@@ -65,13 +69,11 @@ bool Peekback_Stack::Push(const string &elem)
 
 bool Peekback_Stack::Peek(int num, string &elem)
 {
-	if (Empty())
-	{
+	if (Empty()) {
 		cerr << "Sorry, the stack is empty." << endl;
 		return false;
 	}
-	if (num < 0 || num >= Size())
-	{
+	if (num < 0 || num >= Size()) {
 		cerr << "Sorry, the number is wrong." << endl;
 		return false;
 	}
@@ -82,9 +84,7 @@ bool Peekback_Stack::Peek(int num, string &elem)
 void Peekback_Stack::Print(ostream &os /* = cout */) const
 {
 	for (vector<string>::const_reverse_iterator itr = vecStack.rbegin(), vecEnd = vecStack.rend(); itr != vecEnd; ++itr)
-	{
 		os << *itr << " ";
-	}
 	os << endl;
 }
 

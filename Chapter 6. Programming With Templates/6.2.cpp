@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ January 12th, 2014 *
- **************************************************/
-
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ January 12th, 2014
+//
 
 #include <fstream>
 #include "Matrix.h"
@@ -28,21 +27,20 @@ template <typename Type>
 Matrix<Type> operator*(const Matrix<Type> &mat1, const Matrix<Type> &mat2)
 {
 	Matrix<Type> result(mat1.Rows(), mat2.Cols());
-	for (int ix = 0; ix < mat1.Rows(); ++ix)
-		for (int jx = 0; jx < mat1.Cols(); ++jx)
-		{
+	for (int ix = 0; ix < mat1.Rows(); ++ix) {
+		for (int jx = 0; jx < mat1.Cols(); ++jx) {
 			result(ix, jx) = 0;
 			for (int kx = 0; kx < mat1.Cols(); ++kx)
 				result(ix, jx) += mat1(ix, kx) * mat2(kx, jx);
 		}
+	}
 	return result;
 }
 
 template <typename Type>
 Matrix<Type> &Matrix<Type>::operator=(const Matrix &temp)
 {
-	if (this != &temp)
-	{
+	if (this != &temp) {
 		myRows = temp.myRows;
 		myColmuns = temp.myColmuns;
 		int size = myColmuns * myRows;
@@ -67,8 +65,7 @@ ostream &Matrix<Type>::Print(ostream &os) const
 {
 	int matrixSize = Cols() * Rows();
 	int col = Cols();
-	for (int ix = 0; ix < matrixSize; ++ix)
-	{
+	for (int ix = 0; ix < matrixSize; ++ix) {
 		if (ix % col == 0)
 			os << endl;
 		os << *(myMatrix + ix) << ' ';
@@ -80,15 +77,13 @@ ostream &Matrix<Type>::Print(ostream &os) const
 int main(int argc, char *argv[])
 {
 	ofstream writeFile("E:\\¼ÆËã»ú\\±à³Ì\\Essential C++\\EssentialC++\\EssentialC++\\TestFile_6.2.txt");
-	if (!writeFile.is_open())
-	{
+	if (!writeFile.is_open()) {
 		cerr << "Sorry, the file fails to read!" << endl;
 		return -1;
 	}
 	Matrix<float> identity(4, 4);
 	writeFile << "Matrix identity: " << endl << identity << endl;
-	float arr1[16] =
-	{
+	float arr1[16] = {
 		1.0, 0.0, 0.0, 0.0,
 		0.0, 1.0, 0.0, 0.0,
 		0.0, 0.0, 1.0, 0.0,
@@ -104,8 +99,7 @@ int main(int argc, char *argv[])
 	writeFile << "Matrix 2 8*12: " << endl << mat2 << endl;
 	mat2 = mat1;
 	writeFile << "Matrix 2 now: " << endl << mat2 << endl;
-	float arr2[16] =
-	{
+	float arr2[16] = {
 		1.3f, 0.4f, 2.6f, 8.2f,
 		6.2f, 1.7f, 1.3f, 8.3f,
 		4.2f, 7.4f, 2.7f, 1.9f,

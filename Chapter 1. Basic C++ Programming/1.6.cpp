@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ November 27th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ November 27th, 2014
+//
 
 #include <iostream>
 #include <vector>
@@ -16,13 +15,9 @@ int main(int argc, char *argv[])
 	vector<int> vecNumber;
 	cout << "Please enter some integers: ";
 	while (cin >> number)
-	{
 		vecNumber.push_back(number);
-	}
 	for (vector<int>::iterator itr = vecNumber.begin(), vecEnd = vecNumber.end(); itr != vecEnd; ++itr)
-	{
 		sum += *itr;
-	}
 	cout << "The sum is " << sum << endl;
 	double average = sum / vecNumber.size();
 	cout << "The average is " << average << endl;

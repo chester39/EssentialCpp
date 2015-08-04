@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 29th, 2014
+//
+
 #ifndef STACK_H_
 #define STACK_H_
 
@@ -47,8 +53,7 @@ protected:
 
 bool Stack::Pop(string &elem)
 {
-	if (Empty())
-	{
+	if (Empty()) {
 		cerr << "Sorry, the stack is empty." << endl;
 		return false;
 	}
@@ -59,8 +64,7 @@ bool Stack::Pop(string &elem)
 
 bool Stack::Push(const string &elem)
 {
-	if (Full())
-	{
+	if (Full()) {
 		cerr << "Sorry, the stack is full." << endl;
 		return false;
 	}
@@ -72,9 +76,7 @@ bool Stack::Push(const string &elem)
 void Stack::Print(ostream &os /* = cout */) const
 {
 	for (vector<string>::const_reverse_iterator itr = vecStack.rbegin(), vecEnd = vecStack.rend(); itr != vecEnd; ++itr)
-	{
 		os << *itr << " ";
-	}
 	os << endl;
 }
 

@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ December 22nd, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 22nd, 2014
+//
  
 #include <iostream>
 #include <cstdlib>
@@ -41,7 +40,12 @@ inline double UserProfile::GuessAverage() const
 
 inline string UserProfile::UserLevel() const
 {
-	static string levelTable[] = { "Beginner", "Intermediate", "Advanced", "Guru" };
+	static string levelTable[] = { 
+		"Beginner", 
+		"Intermediate", 
+		"Advanced", 
+		"Guru" 
+	};
 	return levelTable[nowLevel];
 }
 

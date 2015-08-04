@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                 Stanley Lippman                *
- *                 Chen Chen @ January 12th, 2014 *
- **************************************************/
-
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ January 12th, 2014
+//
 
 	ifstream infile(file_name); //Type do not match. 
 

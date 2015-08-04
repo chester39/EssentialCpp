@@ -1,15 +1,13 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ November 26th, 2014 *
- **************************************************/
- 
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ November 27th, 2014
+//
  
 const char *MessageToUser(int numTries)
 {
 	const int num = 5;
-	static const char *userMessage[num] = 
-	{
+	static const char *userMessage[num] = {
 		"Go on, make a guess.",
 		"Oops! Nice guess but not quite it.",
 		"Oh. Sorry. Wrong again.",

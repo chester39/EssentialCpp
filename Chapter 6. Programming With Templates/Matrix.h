@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ January 12th, 2014
+//
+
 #ifndef MATRIX_H_
 #define MATRIX_H_
 

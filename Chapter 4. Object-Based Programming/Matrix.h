@@ -1,3 +1,9 @@
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 23rd, 2014
+//
+
 #ifndef MATRIX_H_
 #define MATRIX_H_
 
@@ -15,7 +21,7 @@ public:
 	Matrix(float = 0.0, float = 0.0, float = 0.0, float = 0.0,
 		float = 0.0, float = 0.0, float = 0.0, float = 0.0,
 		float = 0.0, float = 0.0, float = 0.0, float = 0.0,
-		float = 0.0, float = 0.0, float = 0.0, float = 0.0 );
+		float = 0.0, float = 0.0, float = 0.0, float = 0.0);
 	int Rows() const
 	{
 		return 4;

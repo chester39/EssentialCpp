@@ -1,9 +1,8 @@
-/**************************************************
- *              Essential C++                     *
- *                Stanley Lippman                 *
- *                Chen Chen @ December 29th, 2014 *
- **************************************************/
-
+//
+//  Essential C++
+//      Stanley Lippman
+//      Chen Chen @ December 29th, 2014
+//
 
 #include "LIFO_Stack.h"
 #include "Peekback_Stack.h"
@@ -30,8 +29,7 @@ int main(int argc, char *argv[])
 	cout << "Peek() of LIFO_Stack: " << endl;
 	Peek(lifoStack, lifoStack.Top() - 1);
 	cout << lifoStack;
-	while (!lifoStack.Empty())
-	{
+	while (!lifoStack.Empty()) {
 		string temp;
 		if (lifoStack.Pop(temp))
 			peekbackStack.Push(temp);
